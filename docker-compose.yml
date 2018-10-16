@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  azure-rbac-example:
+    build:
+      context: .
+    ports:
+      - "8080:80"
+    env_file:
+      - ./resources/config.env
+    volumes:
+      - ./app:/app
